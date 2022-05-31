@@ -1,0 +1,95 @@
+
+
+.ruyxat__container {
+    padding-top: 80px;
+}
+.ruyxat__nav{
+    border-top: 1px solid #979797;
+    display: flex
+}
+.ruyxat__list {
+    @include reset-list;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between; 
+   flex-grow: 1;
+    
+}
+.ruyxat__item{
+  
+    text-align: center;
+    width: 14%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+   
+}
+
+.ruyxat__link {
+    font-size: 20px;
+    line-height: 24px; 
+    color: #222124;
+    padding: 15px 24px;
+    &:hover{
+       
+        background-color: $accent-color;
+        border-radius: 27px;
+        color: #fff;
+    }
+}
+.ruyxat__link--active{
+    background-color: $accent-color;
+        border-radius: 27px;
+        color: #fff;
+}
+.ruyxat__link--filtr{
+    background: #F5F5F5;
+    border-radius: 27px;
+    background-image: url(../img/filtr.svg);
+    background-repeat: no-repeat;
+    background-position: 15px 18px;
+    padding-left: 40px;
+    margin-top: 35px;
+    margin-bottom: 32px;
+    // padding-bottom: 0px;
+    // padding-top: 20px;
+    margin-left: 60px;
+}
+@media screen and (max-width:  $mobile) {
+  .ruyxat__list{
+      width: 100%;
+      overflow-x: scroll;
+     
+      flex-wrap: nowrap;
+      margin-bottom: 45px;
+  }
+  .ruyxat__list::-webkit-scrollbar {
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  .ruyxat__list::-webkit-scrollbar-thumb{
+    background-color: #fff
+  }
+  .ruyxat__list:hover::-webkit-scrollbar-thumb{
+      background-color: #fff;
+      border-radius: 15px;
+  }
+  
+  .ruyxat__item{
+      width: auto;
+      flex-shrink: 0;
+  }
+  .ruyxat__nav{
+      flex-direction: column;
+  }
+  .ruyxat__link--filtr{
+      margin: 0;
+      width: 100%;
+      padding: 20px 162px 20px 191px;
+      background-position: 130px center ;
+    //   margin-top: 100px;
+      
+  }
+}

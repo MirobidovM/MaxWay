@@ -1,0 +1,154 @@
+.intro{
+    background-image: url(../img/intro-img.png);
+   background-repeat: no-repeat;
+  background-position-x: calc(50% + 250px);
+  position: relative;
+  &::before{
+      position: absolute;
+      width: 560px;
+      height: 800px;
+      display: block;
+      right: 0;
+      top: -128px;
+      z-index: -1;
+      content: "";
+      background-color:  #800A7A;
+  }
+}
+.intro__container{
+    padding-top: 70px;
+    padding-bottom: 0;
+}
+.intro__content{
+    
+    width: 434px;
+}
+.intro__title{
+    font-weight: 900;
+font-size: 80px;
+line-height: 85px;
+margin: 0;
+color: #222124
+}
+.intro__discription{
+    margin: 0;
+    margin-top: 14px;
+    font-size: 18px;
+line-height: 32px;
+color: #222124;
+}
+.intro__list{
+    display: flex;
+    margin-top: 66px;
+}
+.intro__item{
+    @include reset-list;
+    width: 255px;
+    margin-right: 30px;
+    border-radius: 12px;
+    padding: 31px 20px 20px;
+    &:hover{
+        box-shadow: -2px 2px 2px 2px rgba(15, 13, 13, 0.2);
+    }
+    &:last-child{
+        margin-right: 0;
+    }
+}
+.intro__item--yellow{
+    // background-color: linear-gradient(315.49deg, #FFC85C 1.32%, #F1B301 96.68%);
+    background-color:  #FFC85C ;
+    background-image: url(../img/pitsa_intro.png);    
+    color: #E76A06;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+}
+.intro__item--dark{
+    background: #800A7A;
+    background-image: url(../img/cofee.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    color: #FC96F7;
+}
+.intro__link{
+    background: rgba(255, 255, 255, 0.203344);
+border-radius: 19px;
+padding: 11px 23px 10px 53px;
+color: #FFFFFF;
+transition: .3s ease all;
+&:hover{
+    color: $accent-color;
+    box-shadow: 2px 2px 2px 1px rgba(15, 13, 13, 0.2);
+}
+
+}
+.intro__item-title{
+    margin: 0px;
+    font-weight: bold;
+font-size: 34px;
+line-height: 32px;
+width: 104px;
+text-transform: uppercase;
+margin-top: 70px;
+}
+.intro__link--olov{
+    background-image: url(../img/olov.svg);
+    background-position: 22px center;
+    background-repeat: no-repeat;
+}
+.intro__link--raketa{
+    background-image: url(../img/raketa.svg);
+    background-position: 22px center;
+    background-repeat: no-repeat;
+}
+@media screen and (max-width:  $mobile) {
+    .intro{
+        background-image: url(../img/intro_mob.png);
+        background-position: center;
+        background-position-y: 0px;
+        &::before{
+            width: 100%;
+            height: 370px;
+            top: 133px;
+        }
+    }
+  .intro__container{
+      padding-top: 300px;
+      text-align: center;
+      
+  }
+  .intro__content{
+      width: 274px;
+      text-align: center;
+      margin: 0 auto;
+  }
+  .intro__title{
+    font-size: 36px;
+    line-height: 44px;
+    text-align: center;
+    width: 274px;
+    color: #FFFFFF;
+  }
+  .intro__discription{
+      margin-top: 12px;
+      color: #FFFFFF;
+  }
+  .intro__list{
+      flex-wrap: nowrap;
+      overflow: scroll;
+     
+  }
+  .intro__list::-webkit-scrollbar {
+    height: 10px;
+  }
+  .intro__list::-webkit-scrollbar-track {
+    background: #fff;
+  }
+  .intro__list:hover::-webkit-scrollbar-thumb{
+    background-color: #fff;
+    border-radius: 15px;
+}
+  .intro__item{
+      flex-shrink: 0;
+      
+  }
+}
